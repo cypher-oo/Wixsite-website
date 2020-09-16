@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+
+     <head>
+	    <title> Responsive Design </title>
+            <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+            <link type="text/css" rel="stylesheet" href="main.css" />
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+			
+		<style type="text/css">
+		
+		#container{
+		   width: 960px;
+		   margin:0px; auto;
+		   }
+		   
+		 #left-column{
+		     width: 700px;
+			 float: left;
+			 background: blue;
+			 }
+			 
+		 #right-column{
+		     width: 260px;
+			 float:left;
+			 background: orange;
+			 }
+		@media screen and (max-width:959px){
+             #container{
+			      width:100%;
+				  
+              }		
+			  
+			  #left-column{
+			       width:70%;
+				   }
+				   
+			#right-column{
+                 width:30%;
+                   }
+           
+		   img{
+		      width: 100%;
+			  }
+            }		   
+			  
+			  
+	  @media screen and (max-width:640px){
+	  
+	        #left-column{
+			       width:100%;
+				   }
+	  
+	  
+	        #right-column{
+                 width:100%;
+                   }
+				   
+			}	   
+			
+	  @media screen and (max-width:320px){
+	  
+	        #container{
+			    width:320px;
+				}
+				
+		  }		
+			 </style>
+	    
+	</head>		
+
+   <body>
+       
+		<div id="container">
+		<img src="google.png" class="logo" >
+		<section id="left-column">
+		    This is the left column and we are going to try and make it responsive.
+			</section>
+			<aside id="right-column">
+			    This is the right column and we are going to make this responsive.
+				</aside>
+				</div>
+				
+   
+   
+   </body>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+ </html>  

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+  <html lang="en" >
+    <head>
+	
+	   <title> ToddyCafe </title>
+	   <link rel="stylesheet" type="text/css" href="css/style.css">
+	   <meta name="viewport" content="width=device-width, intial-scale=1.0">
+	  <link href="https://fonts.googleapis.com/css2?family=Flamenco&display=swap" rel="stylesheet">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+	 <style  type="text/css">
+	     
+		 
+		 *{
+		    margin: 0px;
+			padding:0px;
+			box-sizing:border-box;
+			}
+			
+			body{
+			font-size: 20px;
+			overflow-x:hidden;
+			font-family: 'Flamenco', cursive;
+			}
+			
+		 header{
+		    background-image: url('ice cream.jpeg');
+			
+			background-size:cover;ff
+			background-repeat:no-repeat;
+			background-position:centre;
+			height: 100vh;
+		}
+ 
+        .clearfix:after{
+            content:".";
+            visibility:hidden;
+             display: block;
+             height: 0px;
+             clear: both;
+
+           }			 
+	     
+		 .row{
+		 max-width: 1180px;
+		 margin: 0 auto;
+		 }
+		 
+		 .logo{
+		  
+		    height: 150px;
+			width: 120px;
+			position: absolute;
+			margin-top: 20px;
+			left: 50px;
+			}
+			
+			
+		 .main-nav{
+		 float:right;
+		 margin-top: 60px;
+		 }
+		 
+		 .main-nav li{
+		   display:inline-block;
+		   list-style:none;
+		   margin-left:15px;
+		   
+		   
+		   
+		   }
+		   
+		   .main-nav li a{
+		   padding: 5px 0;
+		     color:#000000;
+			 text-decoration:none;
+			 text-transform: uppercase;
+			 font-size: 80%;
+			 font-weight: 100;
+			 }
+			 
+			 .main-nav li a:hover{
+			  border-bottom: 2px solid #2A01DF;
+			  
+			  
+			  }
+		 
+		 .main-container-header{
+		     width: 1180px;
+			 position:absolute;
+			 top: 55%;
+			 left:3%;
+			
+			
+			 }
+			 
+			 h1{
+			   color: #000000;
+			   font-size: 240%;
+			   word-spacing:5px;
+			   letter-spacing: 3px;
+			   margin-bottom: 20px;
+			   text-transform:uppercase;
+			   font-weight:lighter;
+			   }
+         
+		 
+		    .btn{
+			
+			  display: inline-block;
+			  padding:10px 30px;
+			  font-weight: lighter;
+			  text-decoration: none;
+			  text-transform: uppercase;
+			  border-radius: 200px;
+			  transition: background-color 0.2s, color 0.2;
+			  }
+			  
+			  .btn-full{
+			    background-color: transparent;
+				color:#3A01DF;
+				margin-right: 15px;
+				border:1px solid #2A01DF;
+				}
+				
+				.btn-full:hover{
+				     background-color: transparent;
+					 color: #FFFFFF;
+					 border:1px solid #FFFFFF;
+					 }
+				
+				.btn-nav{
+			    background-color: transparent;
+				color:#FFFFFF;
+				margin-right: 15px;
+				border:1px solid #FFFFFF;
+				}
+				
+				.btn-nav:hover{
+				     background-color: transparent;
+					 color: #2A01DF;
+					 border:1px solid #2A01DF;
+					 }
+					 
+			.colorchange{
+			   animation: colorchangetoddy 1s infinite;
+			   }
+			   
+			 @keyframes colochangetoddy{
+			   0%{color:red;}
+			   25%{color:#2A01DF;}
+			   50%{color: white;}
+			   100%{color:#2A01DF;}
+			   
+			   }
+			   
+			    .mobile-icon{display:none;}
+			   
+			   /*//////// Responsive queries //////////*/
+			   
+			   @media only screen and (max-width: 1180px){
+			     .main-content-header{
+				  width:100%;
+				  padding:0 2%;
+				  }
+			   }
+			   
+			   @media only screen and (max-width: 998px){
+			      h1{font-size: 200%;}
+				  }
+				  
+			 @media only screen and (max-width: 768px){
+			     h1{font-size: 180%;}
+				 .main-nav{display:none;}
+				 
+				 .mobile-icon{
+				     display:inline-block;
+					 color:#000000;
+					 float:right;
+					 margin-top:30px;
+					 margin-right: 20px;
+					 }
+				 
+				 
+				 .main-nav li{
+				 float:left;}
+				 
+				 
+				 .main-nav li{
+				 display: block;
+				 margin-top: 10px;
+				 }
+				 
+				 }
+				 
+		 @media only screen and (max-width:480px){
+               .btn-full{
+                    margin-bottom: 20px;
+                }
+				h1{font-size: 160%;}
+         }				
+		 </style>
+	   
+	   
+	   
+	 </head>
+	 
+	 <body>
+	 
+	    <header>
+		   
+		    <nav>
+			   <div class="row clearfix">
+			        <img src="cafe.png" class="logo">
+					
+					<ul class="main-nav animated slideInDown"  id="check-class">
+					  <li> <a href="#"> CAKE DELIVERY</a></li>
+					  <li> <a href="#">HOW TO ORDER</a></li>
+					  <li> <a href="#"> CHECK MORE</a></li>
+					  <li> <a href="#"> SIGN UP</a></li>
+					  
+					</ul>
+					<a href="#" class="mobile-icon" onclick="slideshow()"> <i class="fa fa-bars"></i> </a>
+                </div>
+             </nav>
+			 
+			 <div class="main-container-header">
+			 
+			 <h1> WELCOME TO <span class="colorchange">TODDY CAFE</SPAN>.<br>
+			      HOUSE OF CAKE LOVER OO YES.</h1>
+				
+			<a href="#" class="btn btn-full">click to order</a>
+			<a href="#" class="btn btn-nav">show me more</a>
+			
+			 </div>
+          </header>
+		  
+		  <script type="text/javascript">
+		  
+		  
+		  function slideshow(){
+		        var x = document.getElementById('check-class');
+				
+				if(x.style.display === "none"){
+				   x.style.display="block";
+				   }else{
+				       x.style.display="none";
+				   }
+				
+				
+				
+				
+				}
+		  
+		  </script>
+     
+          
+   </body>
+
+
+</html>   
+
+  	 
