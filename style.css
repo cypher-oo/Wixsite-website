@@ -1,0 +1,209 @@
+
+* {
+	box-sizing:border-box;
+}
+ body
+	  {
+		  
+        overflow-x: hidden;
+		background-color:#FFFFFF;
+        height: 100%;
+        overflow-y: scroll !important;
+        overscroll-behavior: contain;
+        position: static;
+        /*overflow-y: hidden;*/
+    }
+	
+	
+	.getit{
+		font-size:25px;
+		color: #210641;
+		font-family: 'Source Sans Pro', sans-serif;
+		position:absolute;
+		top:20px;
+		left:190px;
+	}
+	
+	.young{
+		font-size:17px;
+		color: #210641;
+		font-family:'Source Sans Pro', sans-serif;
+		position:absolute;
+		top:60px;
+		left:190px;
+	}
+		
+		@media screen and (max-width: 500px) {
+		.header {
+			float:none;
+			display:block;
+			text-align:left;
+		}
+		}
+		
+		.container{
+			
+			background-color:#210641;
+			width:100%;
+			height:800px;
+			position:absolute;
+			top: 130px;
+			left:0px;
+			
+		}
+		
+		   
+		  li {
+			  
+		   top:5px;
+		   float:left;
+            }
+
+          li a {
+          display: block;
+           color: white;
+          text-align: center;
+           padding: 14px 16px;
+             text-decoration: none;
+			
+
+             }
+			
+		
+		.menu{
+			width:100%;
+			height:1px;
+			background-color: #FFFFFF;
+			position:absolute;
+			top:60px;
+			left:0px;
+		}
+		 
+	   	@media screen and (max-width: 1000px) {
+		.container {
+			float:none;
+			display:block;
+			text-align:left;
+		}
+		}
+           	
+         .menu-container{
+      		background-color:#FFFFFF;
+			width:100%;
+			height:2300px;
+			position:absolute;
+			top: 1000px;
+			left:0px;
+			
+		}
+		
+		     /* Slideshow container */
+               .slideshow-container {
+                 margin:auto;
+			   }
+			   
+			   
+           .showSlides_image{
+             
+              width: 750px;
+              height: 400px;
+               position:absolute;
+                top:240px;
+				float:left;
+		   }				
+       
+			.showSlides_text{
+                display :inline;
+                font-family:'Noto Sans JP', sans-serif;
+				position:absolute;
+				top:350px;
+				left:890px;
+			}	
+
+              /* The dots/bullets/indicators */
+                  .dot {
+                    height: 15px;
+                    width: 15px;
+                    margin: 0 2px;
+                    background-color: #bbb;
+                    border-radius: 50%;
+                    display: inline-block;
+                    transition: background-color 0.6s ease;
+					
+					
+                        }
+
+                   .active {
+                      background-color: #717171;
+                       }
+
+             /* Fading animation */
+                  .fade {
+                  -webkit-animation-name: fade;
+                  -webkit-animation-duration: 1.5s;
+                   animation-name: fade;
+                   animation-duration: 1.5s;
+                      }
+
+            @-webkit-keyframes fade {
+                     from {opacity: .4} 
+                    to {opacity: 1}
+                     }
+
+            @keyframes fade {
+                     from {opacity: .4} 
+                     to {opacity: 1}
+                     }
+  			
+			.left{
+				width: 20px;
+				height:20px;
+				transition: .5s;
+				box-shadow: -2px 2px 0 #000000;
+                cursor:pointer;
+                transform:rotate(45deg);
+				transform:rotate(45deg);
+                position:absolute;
+                top:440px;
+                left:100px;
+			}
+			
+			.right{
+				width: 20px;
+				height:20px;
+				transition: .5s;
+				box-shadow: -2px 2px 0 #000000;
+                cursor:pointer;
+                transform:rotate(45deg);
+				transform:rotate(224deg);
+                position:absolute;
+                top:440px;
+                left:1230px;
+			}
+      				
+	
+	     .sign-button{
+           
+               width:150px;
+          border: none;
+        
+      background-color: #210641;
+       padding: 13px 20px;
+       text-align:centre;
+       color: white;
+       text-decoration: none;
+       display: inline-block;
+       border-radius: 35px;
+       font-size: 25px;
+        margin: 35px 25px;
+		outline:0px;
+       cursor: pointer;
+       position:absolute;
+       top:1850px;
+       left:570px;
+		 }
+		 
+		 
+		
+			
+		
