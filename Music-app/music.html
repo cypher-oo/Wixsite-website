@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<head lang="en">
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	
+    <title>Music App</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Lobster&family=Nunito:wght@200&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="main_div">
+   <div class="music_container">
+   <h2 id="title">LOTUS LANE</h2>
+   <h3 id="artist"> The Hey</h3>
+   <div class="img_container">
+         <img src="images/hey.jpeg" alt="">
+		 </div>
+	<audio src="music/hey.mp3"></audio>	
+
+    <!---- controls ---->
+  <div class="music_controls">
+    <i class="fa fa-backward" aria-hidden="true" id="prev" title="Previous"></i>
+    <i class="fa fa-play main_button" aria-hidden="true" id="play" title="Play"></i>
+      <i class="fa fa-forward" aria-hidden="true" id="next" title="Next"></i>
+ 
+ 
+      </div>	 
+	</div>
+</div>	
+
+<script>
+
+   const music = document.querySelector("audio");
+   const img = document.querySelector("img");
+   const play = document.getElementById("play");
+   const artist = document.getElementById("artist");
+   const title = document.getElementById("title");
+   const prev = document.getElementById("prev");
+   const next = document.getElementById("next");
+   
+   
+   const songs = [
+   {
+   name: "hey",
+   title: "Lotus Lane",
+   artist: "The Hey",
+   },
+   {
+    name: "summer",
+   title: "sappheiros",
+   artist: "Aurora",
+   },
+   {
+    name: "ukulele",
+   title: "Walking Firiri",
+   artist: "Takma",
+   },
+   ];
+   
+  
+  let isPlaying = false;
+  // for play function
+  const playMusic =  () => {
+      isPlaying = true;
+	  music.play();
+	   play.classList.replace("fa-play", "fa-pause");
+	   img.classList.add("anime");
+	  };
+	  
+	  
+	  // for pause function
+      const pauseMusic =  () => {
+      isPlaying = false;
+	  music.pause();
+	   play.classList.replace("fa-pause", "fa-play");
+	   img.classList.remove("anime");
+	  };
+	  
+	  
+	  play.addEventListener("click", () => {
+	  if (isPlaying) {
+	    pauseMusic();
+		} else {
+		   playMusic();
+		   }
+		   });
+		   
+	//  changing the music data
+
+   const loadSong = (songs) => {
+     title.textContent = songs.title;
+     artist.textContent = songs.artist;
+     music.src = "music/" + songs.name + ".mp3";
+     img.src = "images/" + songs.name + ".jpeg";
+};
+
+songIndex = 0;
+ //loadSong(songs[2]);	
+
+const nextSong = () => {
+  songIndex = (songIndex + 1) % songs.length;
+  loadSong(songs[songIndex]);
+  playMusic();
+};
+
+const prevSong = () => {
+  songIndex = (songIndex - 1 + songs.length) % songs.length;
+  loadSong(songs[songIndex]);
+  playMusic();
+};
+
+next.addEventListener("click", nextSong);
+prev.addEventListener("click", prevSong);  
+</script>	  
+  
+
+
+
+
+
+
+
+</body>
+</html>
